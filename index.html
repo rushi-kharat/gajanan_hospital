@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gajanan Multispeciality Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2 class="hospital-name" data-key="hospital-name">Gajanan Hospital And Baal Rugnalay, Phulambri</h2>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link" data-key="nav-home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-key="nav-about">About</a></li>
+                <li><a href="#doctors" class="nav-link" data-key="nav-doctors">Doctors</a></li>
+                <li><a href="#services" class="nav-link" data-key="nav-services">Services</a></li>
+                <li><a href="#facilities" class="nav-link" data-key="nav-facilities">Facilities</a></li>
+                <li><a href="#contact" class="nav-link" data-key="nav-contact">Contact</a></li>
+                <li><a href="#appointment" class="nav-link" data-key="nav-appointment">Appointment</a></li>
+            </ul>
+
+            <div class="header-controls">
+                <div class="time-display" id="current-time"></div>
+                
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="hi">हि</button>
+                    <button class="lang-btn" data-lang="mr">मर</button>
+                </div>
+                
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                
+                <button class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title" data-key="hero-title">Excellence in Healthcare</h1>
+                    <p class="hero-subtitle" data-key="hero-subtitle">Providing compassionate and comprehensive medical care for you and your family</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn--primary" onclick="scrollToSection('appointment')" data-key="book-appointment">Book Appointment</button>
+                        <button class="btn btn--outline" onclick="scrollToSection('services')" data-key="our-services">Our Services</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hospital.png" alt="Hospital Reception" class="hero-img">
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">11+</div>
+                    <div class="stat-label" data-key="years-experience">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label" data-key="expert-doctors">Expert Doctors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label" data-key="emergency-care">Emergency Care</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label" data-key="happy-patients">Happy Patients</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="about-title">About Our Hospital</h2>
+                    <p class="section-subtitle" data-key="about-subtitle">Committed to providing world-class healthcare services</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h3 data-key="our-mission">Our Mission</h3>
+                        <p data-key="mission-text">To provide exceptional healthcare services with compassion, innovation, and excellence, ensuring the well-being of our community through comprehensive medical care and preventive health programs.</p>
+                        
+                        <h3 data-key="our-vision">Our Vision</h3>
+                        <p data-key="vision-text">To be recognized as a leading healthcare institution in Maharashtra, known for our commitment to patient care, medical excellence, and innovative treatment approaches.</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-heart"></i>
+                                <span data-key="compassionate-care">Compassionate Care</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-award"></i>
+                                <span data-key="expert-team">Expert Medical Team</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-clock"></i>
+                                <span data-key="24-7-service">24/7 Emergency Services</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-images">
+                        <img src="images/doctor-cabin-interior.jpg" alt="Hospital Interior" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section id="doctors" class="doctors-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="meet-doctors">Meet Our Doctors</h2>
+                    <p class="section-subtitle" data-key="doctors-subtitle">Experienced healthcare professionals dedicated to your well-being</p>
+                </div>
+                
+                <div class="doctors-grid">
+                    <div class="doctor-card">
+                        <div class="doctor-image">
+                            <img src="images/raviraj.jpg" alt="Dr. Raviraj Pawar">
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Raviraj Pawar</h3>
+                            <p class="doctor-specialty" data-key="general-medicine">General Medicine & Internal Medicine</p>
+                            <p class="doctor-experience">11 <span data-key="years-exp">years experience</span></p>
+                            <p class="doctor-qualifications">MBBS (Pediatrics) </p>
+                            
+                            <div class="doctor-expertise">
+                                <h4 data-key="expertise">Expertise:</h4>
+                                <ul>
+                                    <li data-key="child-growth">Spiacialist in Child growth</li>
+                                    <li data-key="general-physician">General Physician</li>
+                                    <li data-key="immunization-illnness-treatment">Immunization and illnness treatment</li>
+                                    <li data-key="development-care">Development care</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="doctor-schedule">
+                                <p><i class="fas fa-clock"></i> <span data-key="mon-sat">Mon-Sat 9:00 AM - 6:00 PM</span></p>
+                                <p><i class="fas fa-language"></i> English, Hindi, Marathi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-card">
+                        <div class="doctor-image">
+                            <img src="images/apurva.jpg" alt="Dr. Apurva Pawar">
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Apurva Pawar</h3>
+                            <p class="doctor-specialty" data-key="gynecology-obstetrics">Gynecology & Obstetrics</p>
+                            <p class="doctor-experience">11 <span data-key="years-exp">years experience</span></p>
+                            <p class="doctor-qualifications">BAMS, MUHS (Gynecology)</p>
+                            
+                            <div class="doctor-expertise">
+                                <h4 data-key="expertise">Expertise:</h4>
+                                <ul>
+                                    <li data-key="high-risk-pregnancy">High-risk pregnancy</li>
+                                    <li data-key="normal-delivery">Normal delivery</li>
+                                    <li data-key="gynecological-surgeries">Gynecological surgeries</li>
+                                    <li data-key="womens-health">Women's health</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="doctor-schedule">
+                                <p><i class="fas fa-clock"></i> <span data-key="mon-fri-sat">Mon-Fri 10:00 AM - 5:00 PM, Sat 10:00 AM - 2:00 PM</span></p>
+                                <p><i class="fas fa-language"></i> English, Hindi, Marathi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="our-services">Our Services</h2>
+                    <p class="section-subtitle" data-key="services-subtitle">Comprehensive healthcare solutions for all your medical needs</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3 data-key="general-medicine">General Medicine</h3>
+                        <ul class="service-list">
+                            <li data-key="comprehensive-checkups">Comprehensive health check-ups</li>
+                            <li data-key="general-physician">General Physician</li>
+                            <li data-key="cardiac-monitoring">Cardiac care and monitoring</li>
+                            <li data-key="immunization-illnness-treatment">Immunization and illnness treatment</li>
+                            <li data-key="preventive-healthcare">Preventive healthcare</li>
+                            <li data-key="health-counseling">Health counseling</li>
+                            <li data-key="emergency-care">Emergency care</li>
+                            <li data-key="child-growth">Spiacialist in Child growth</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <h3 data-key="gynecology-obstetrics">Gynecology & Obstetrics</h3>
+                        <ul class="service-list">
+                            <li data-key="antenatal-care">Antenatal care and pregnancy monitoring</li>
+                            <li data-key="normal-cesarean-deliveries">Normal and cesarean deliveries</li>
+                            <li data-key="high-risk-pregnancy-mgmt">High-risk pregnancy management</li>
+                            <li data-key="gynecological-consultations">Gynecological consultations</li>
+                            <li data-key="womens-health-screening">Women's health screening</li>
+                            <li data-key="family-planning">Family planning services</li>
+                            <li data-key="reproductive-health">Reproductive health</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section id="facilities" class="facilities-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="our-facilities">Our Facilities</h2>
+                    <p class="section-subtitle" data-key="facilities-subtitle">State-of-the-art medical facilities and equipment</p>
+                </div>
+                
+                <div class="facilities-grid">
+                    <div class="facility-card">
+                        <img src="images/ot.jpg" alt="Operation Theater">
+                        <div class="facility-content">
+                            <h3 data-key="modern-operation-theaters">Modern Operation Theaters</h3>
+                            <p data-key="advanced-surgical-facilities">Advanced surgical facilities with latest technology</p>
+                        </div>
+                    </div>
+                    
+                    <div class="facility-card">
+                        <img src="images/hospital.png" alt="Hospital Building">
+                        <div class="facility-content">
+                            <h3 data-key="modern-infrastructure">Modern Infrastructure</h3>
+                            <p data-key="contemporary-building-design">Contemporary building design with patient comfort in mind</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="facilities-list">
+                    <div class="facility-item">
+                        <i class="fas fa-microscope"></i>
+                        <span data-key="advanced-diagnostic-equipment">Advanced diagnostic equipment</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-ambulance"></i>
+                        <span data-key="24-7-emergency-services">24/7 emergency services</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-procedures"></i>
+                        <span data-key="beds-equipments-support">Beds with essesntial equipments support</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-baby"></i>
+                        <span data-key="labor-delivery-rooms">Labor and delivery rooms</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-bed"></i>
+                        <span data-key="modern-patient-rooms">Patient rooms with modern amenities</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-pills"></i>
+                        <span data-key="pharmacy-premises">Pharmacy on premises</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-truck-medical"></i>
+                        <span data-key="ambulance-services">Ambulance services</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-digital-tachograph"></i>
+                        <span data-key="digital-health-records">Digital health records</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="contact-us">Contact Us</h2>
+                    <p class="section-subtitle" data-key="contact-subtitle">Get in touch with us for any medical assistance</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4 data-key="address">Address</h4>
+                                <p>Main Street, Sambhajinagar-Jaloan Highway<br>Phulambri - 431111, Maharashtra, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-key="phone">Phone</h4>
+                                <p>+91 74 4751 5593</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4 data-key="emergency">Emergency</h4>
+                                <p>+91 74 4751 5593</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-key="email">Email</h4>
+                                <p>info@gajananhospital.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Section -->
+        <section id="appointment" class="appointment-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="book-appointment">Book Appointment</h2>
+                    <p class="section-subtitle" data-key="appointment-subtitle">Schedule your visit with our expert doctors</p>
+                </div>
+                
+                <form id="appointment-form" class="appointment-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="patient-name" data-key="patient-name">Patient Name</label>
+                            <input type="text" id="patient-name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="patient-age" data-key="age">Age</label>
+                            <input type="number" id="patient-age" class="form-control" min="1" max="120" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="patient-gender" data-key="gender">Gender</label>
+                            <select id="patient-gender" class="form-control" required>
+                                <option value="" data-key="select-gender">Select Gender</option>
+                                <option value="male" data-key="male">Male</option>
+                                <option value="female" data-key="female">Female</option>
+                                <option value="other" data-key="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="contact-number" data-key="contact-number">Contact Number</label>
+                            <input type="tel" id="contact-number" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email" data-key="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="preferred-doctor" data-key="preferred-doctor">Preferred Doctor</label>
+                            <select id="preferred-doctor" class="form-control" required>
+                                <option value="" data-key="select-doctor">Select Doctor</option>
+                                <option value="dr-raviraj-pawar">Dr. Raviraj Pawar</option>
+                                <option value="dr-apurva-pawar">Dr. Apurva Pawar</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="department" data-key="department">Department</label>
+                            <select id="department" class="form-control" required>
+                                <option value="" data-key="select-department">Select Department</option>
+                                <option value="general-medicine" data-key="general-medicine">General Medicine</option>
+                                <option value="gynecology" data-key="gynecology-obstetrics">Gynecology & Obstetrics</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="preferred-date" data-key="preferred-date">Preferred Date</label>
+                            <input type="date" id="preferred-date" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="preferred-time" data-key="preferred-time">Preferred Time</label>
+                            <select id="preferred-time" class="form-control" required>
+                                <option value="" data-key="select-time">Select Time</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                                <option value="17:00">05:00 PM</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label class="form-label" for="symptoms" data-key="symptoms-reason">Symptoms/Reason for Visit</label>
+                            <textarea id="symptoms" class="form-control" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="emergency-contact" data-key="emergency-contact">Emergency Contact</label>
+                            <input type="tel" id="emergency-contact" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="medical-history" data-key="medical-history">Previous Medical History (Optional)</label>
+                            <textarea id="medical-history" class="form-control" rows="2"></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary appointment-submit" data-key="submit-appointment">Submit Appointment</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-key="hospital-name">Gajanan Hospital And Baal Rugnalay, Phulambri</h3>
+                    <p data-key="footer-description">Providing excellence in healthcare with compassion and care.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="quick-links">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-key="nav-home">Home</a></li>
+                        <li><a href="#about" data-key="nav-about">About</a></li>
+                        <li><a href="#doctors" data-key="nav-doctors">Doctors</a></li>
+                        <li><a href="#services" data-key="nav-services">Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="contact-info">Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 74 4751 5593</p>
+                    <p><i class="fas fa-envelope"></i> info@gajananhospital.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Phulambri, Maharashtra</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="emergency">Emergency</h4>
+                    <p class="emergency-number">+91 74 4751 5593</p>
+                    <p data-key="24-7-available">Available 24/7</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-key="hospital-name">Gajanan Hospital And Baal Rugnalay, Phulambri</span>. <span data-key="rights-reserved">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-key="appointment-confirmed">Appointment Confirmed!</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <i class="fas fa-check-circle success-icon"></i>
+                <p data-key="appointment-success-message">Your appointment has been successfully booked. We will contact you shortly to confirm the details.</p>
+                <div class="appointment-details" id="appointment-details"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--primary" onclick="closeModal()" data-key="ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
