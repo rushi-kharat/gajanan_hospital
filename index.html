@@ -354,28 +354,94 @@
                     <p class="section-subtitle" data-key="appointment-subtitle">Schedule your visit with our expert doctors</p>
                 </div>
                 
-                <form id="appointmentForm">
-                    <input name="entry.1671506892" type="text" placeholder="Patient Name" required>
-                    <input name="entry.1204016569" type="number" placeholder="Age" required>
-                    <select name="entry.1126308157" required>
-                      <option value="">Select Gender</option>
-                      <option>Male</option>
-                      <option>Female</option>
-                      <option>Other</option>
-                    </select>
-                    <input name="entry.512217331" type="tel" placeholder="Contact Number" required>
-                    <input name="entry.1156312988" type="email" placeholder="Email" required>
-                    <input name="entry.251332902" type="text" placeholder="Preferred Doctor">
-                    <input name="entry.2141674440" type="text" placeholder="Department">
-                    <input name="entry.1956268002" type="date" placeholder="Preferred Date" required>
-                    <input name="entry.330312570" type="time" placeholder="Preferred Time" required>
-                    <textarea name="entry.63806313" placeholder="Symptoms/Reason for Visit" required></textarea>
-                    <input name="entry.1143322387" type="tel" placeholder="Emergency Contact">
-                    <textarea name="entry.2006592150" placeholder="Previous Medical History (Optional)"></textarea>
-                  
-                    <button type="submit">Book Appointment</button>
-                    <p id="successMsg" style="display:none;color:green;">Appointment booked successfully!</p>
-                  </form>                  
+                <form id="appointment-form" class="appointment-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="patient-name" data-key="patient-name">Patient Name</label>
+                            <input type="text" id="patient-name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="patient-age" data-key="age">Age</label>
+                            <input type="number" id="patient-age" class="form-control" min="1" max="120" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="patient-gender" data-key="gender">Gender</label>
+                            <select id="patient-gender" class="form-control" required>
+                                <option value="" data-key="select-gender">Select Gender</option>
+                                <option value="male" data-key="male">Male</option>
+                                <option value="female" data-key="female">Female</option>
+                                <option value="other" data-key="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="contact-number" data-key="contact-number">Contact Number</label>
+                            <input type="tel" id="contact-number" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email" data-key="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="preferred-doctor" data-key="preferred-doctor">Preferred Doctor</label>
+                            <select id="preferred-doctor" class="form-control" required>
+                                <option value="" data-key="select-doctor">Select Doctor</option>
+                                <option value="dr-raviraj-pawar">Dr. Raviraj Pawar</option>
+                                <option value="dr-apurva-pawar">Dr. Apurva Pawar</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="department" data-key="department">Department</label>
+                            <select id="department" class="form-control" required>
+                                <option value="" data-key="select-department">Select Department</option>
+                                <option value="general-medicine" data-key="general-medicine">General Medicine</option>
+                                <option value="gynecology" data-key="gynecology-obstetrics">Gynecology & Obstetrics</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="preferred-date" data-key="preferred-date">Preferred Date</label>
+                            <input type="date" id="preferred-date" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="preferred-time" data-key="preferred-time">Preferred Time</label>
+                            <select id="preferred-time" class="form-control" required>
+                                <option value="" data-key="select-time">Select Time</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                                <option value="17:00">05:00 PM</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label class="form-label" for="symptoms" data-key="symptoms-reason">Symptoms/Reason for Visit</label>
+                            <textarea id="symptoms" class="form-control" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="emergency-contact" data-key="emergency-contact">Emergency Contact</label>
+                            <input type="tel" id="emergency-contact" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="medical-history" data-key="medical-history">Previous Medical History (Optional)</label>
+                            <textarea id="medical-history" class="form-control" rows="2"></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary appointment-submit" data-key="submit-appointment">Submit Appointment</button>
+                </form>
             </div>
         </section>
     </main>
