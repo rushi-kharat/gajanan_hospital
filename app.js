@@ -769,3 +769,25 @@ window.addEventListener('online', () => {
 window.addEventListener('offline', () => {
   console.log('Connection lost - operating in offline mode');
 });
+
+document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSd5ZbbXPRT1GQS3eanptWjtKK5pxw-gGBBO0c6joaZlr74F5A/formResponse', {
+      method: 'POST',
+      body: data,
+      mode: 'no-cors'
+  }).then(() => {
+      form.reset();
+      document.getElementById('successMsg').style.display = 'block';
+      setTimeout(() => {
+          document.getElementById('successMsg').style.display = 'none';
+      }, 5000);
+  }).catch(err => {
+      alert('Something went wrong. Please try again.');
+      console.error(err);
+  });
+});
